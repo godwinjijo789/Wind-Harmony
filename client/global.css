@@ -1,0 +1,118 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /**
+   * Tailwind CSS theme
+   * tailwind.config.ts expects the following color variables to be expressed as HSL values.
+   * A different format will require also updating the theme in tailwind.config.ts.
+  */
+  :root {
+    --background: 220 26% 5%;
+    --foreground: 60 95% 95%;
+
+    --card: 220 26% 8%;
+    --card-foreground: 60 95% 95%;
+
+    --popover: 220 26% 8%;
+    --popover-foreground: 60 95% 95%;
+
+    --primary: 30 100% 55%;
+    --primary-foreground: 220 26% 5%;
+
+    --secondary: 45 85% 25%;
+    --secondary-foreground: 60 95% 95%;
+
+    --muted: 220 26% 12%;
+    --muted-foreground: 210 15% 65%;
+
+    --accent: 45 100% 60%;
+    --accent-foreground: 220 26% 5%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 26% 18%;
+    --input: 220 26% 18%;
+    --ring: 30 100% 55%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .light {
+    --background: 45 95% 98%;
+    --foreground: 220 26% 8%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 26% 8%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 26% 8%;
+
+    --primary: 30 100% 45%;
+    --primary-foreground: 45 95% 98%;
+
+    --secondary: 45 85% 90%;
+    --secondary-foreground: 220 26% 8%;
+
+    --muted: 45 85% 95%;
+    --muted-foreground: 220 15% 45%;
+
+    --accent: 45 100% 50%;
+    --accent-foreground: 220 26% 8%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 45 85% 88%;
+    --input: 45 85% 88%;
+    --ring: 30 100% 45%;
+    --sidebar-background: 220 26% 10%;
+    --sidebar-foreground: 60 95% 95%;
+    --sidebar-primary: 30 100% 55%;
+    --sidebar-primary-foreground: 220 26% 5%;
+    --sidebar-accent: 220 26% 15%;
+    --sidebar-accent-foreground: 60 95% 95%;
+    --sidebar-border: 220 26% 18%;
+    --sidebar-ring: 30 100% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  /* Custom OTP input styling */
+  input[inputmode="numeric"] {
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
+  }
+
+  input[inputmode="numeric"]::-webkit-outer-spin-button,
+  input[inputmode="numeric"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
